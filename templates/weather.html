@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Know Weather</title>
+{% endblock title %}
+{% block body %}
+<br><br><br><br>
+<form action="/answer2" method="POST">
+<div class="mx-auto" style="width:500px;">
+    <span class="input-group-text" id="inputGroup-sizing-default">Enter location</span>
+    <input type="text" name='location' class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+<br><br><br>
+  <div class="mx-auto" style="width:100px;" >
+    <button type="Submit" class="btn btn-dark">Submit</button>
+</div>
+</form>
+
+
+{% endblock body %}

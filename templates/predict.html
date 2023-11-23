@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Predict</title>
+{% endblock title %}
+{% block body %}
+<br>
+<br><div class="badge bg-dark text-wrap" >
+<h2 align="center"><i>Please enter the following information about soil content and weather conditions.</i>
+</h2></div>
+<br>
+<div class="mx-auto" style="width:500px;">
+    <a href="/weather"><p class="text-white">*Click to know current weather at your location</p></a>
+</div>
+<form action="/predict1"  method="POST">
+<div class="mx-auto" style="width:600px;">
+    <div class="w-500">
+        <div class="input-group mb-3 m-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Nitrogen</span>
+            <input type="text" name="nitrogen" placeholder="Enter ratio of Nitrogen in your soil" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 m-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Phosphorous</span>
+            <input type="text" name="phosphorous" placeholder="Enter ratio of Phosphorous in your soil" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 m-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Potassium</span>
+            <input type="text" name="potassium" placeholder="Enter ratio of Potassium in your soil" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 m-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Ph</span>
+            <input type="text" name="ph" placeholder="Enter Ph value of your soil" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 m-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Temperature</span>
+            <input type="text" name="temperature" placeholder="Enter your area's temperature in degree Celcius" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 m-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Humidity</span>
+            <input type="text" name="humidity" placeholder="Enter your area's relative humidity in %" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3 m-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Rainfall</span>
+            <input type="text" name="rainfall" placeholder="Enter rainfall in your area in mm" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="mx-auto" style="width:100px;">
+            <button type="Submit" class="btn btn-dark">Predict</button>
+    </div>
+    </div>
+</form>
+    
+    
+{% endblock body %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Disease</title>
+{% endblock title %}
+{% block body %}
+<div class="container mx-auto" style="width:400px;">
+<h1 class="text-white">Disease summary</h1>
+    <br>
+    <p class="text-white"><b>Probability:</b> {{probability}}</p>
+    <p class="text-white"><b>Name of disease:</b> {{name}}</p>
+    <p class="text-white"><b>Description of disease:</b> {{description}}</p>
+    <p class="text-white"><b>Prevention:</b> {{prevention}}</p>
+</div>
+{% endblock body %}

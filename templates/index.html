@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+  <title>Home</title>
+{% endblock title %}
+{% block body %}
+<br>
+<br>
+
+<br><br><br>
+<div class="row gy-2">
+  <div class="col-lg-3 col-md-4">
+    <div class="card h-100">
+      <img src="/static/info.jpg" class="card-img-top" alt="Get info image">
+      <div class="card-body">
+        <h5 class="card-title mt-3">Get Info</h5>
+        <p class="card-text">Here you can get various types of information about 22 specific crops like about seeds, machinery, storage etc.</p>
+        <a href="/getinfo" class="btn btn-outline-dark">Click to go</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="card h-100">
+      <img src="/static/recommendation.jpg" class="card-img-top" alt="Crop recommendation image">
+      <div class="card-body">
+        <h5 class="card-title mt-3">Crop Recommendation</h5>
+        <p class="card-text">Know the crop that will give best yield, according to your soil content (N,P,K,pH) and weather conditions(rainfall,humidity).</p>
+        <a href="/predict" class="btn btn-outline-dark">Click to go</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="card h-100">
+      <img src="/static/disease.jpg" class="card-img-top" alt="Disease image">
+      <div class="card-body">
+        <h5 class="card-title mt-3">Disease Prevention</h5>
+        <p class="card-text">Here you can know type of crop disease by uploading photo and will get to know preventive measures about that disease.</p>
+        <a href="/disease" class="btn btn-outline-dark">Click to go</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-4">
+    <div class="card h-100">
+      <img src="/static/discussions.jpg" class="card-img-top" alt="Discussion image">
+      <div class="card-body">
+        <h5 class="card-title mt-3">Discussions</h5>
+        <p class="card-text">Here you can ask any agriculture related query. You can also answer some of the previously asked questions.</p>
+        <a href="/discussions" class="btn btn-outline-dark">Click to go</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

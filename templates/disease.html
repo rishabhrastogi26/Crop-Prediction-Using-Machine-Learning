@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Disease-Prediction</title>
+{% endblock title %}
+{% block body %}
+<div class="container mx-auto" style="width:400px;">
+<br><br><div class="badge bg-dark text-wrap">
+<h3><i>Upload image of plant</i></h3></div>
+<br>
+<br><br><br>
+</div>
+<form action="/answer3" method="POST">
+    <div class="input-group mx-auto" style="width:500px;">
+        <input type="file" name='imag' class="form-control" id="inputGroupFile02">
+    </div>
+    <br>
+    <br>
+    <div class="mx-auto" style="width:100px;">
+        <button type="Submit" class="btn btn-dark">Submit</button>
+    </div>
+</form>
+{% endblock body %}

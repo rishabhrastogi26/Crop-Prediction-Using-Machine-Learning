@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Discussions</title>
+{% endblock title %}
+{% block body %}
+<div class="container mx-auto" style="width:600px;">
+
+<form action="/discussions" method="post">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Farmer Name</span>
+    <input type="text" name="farmername" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<br>
+<br>
+<br>
+<div class="input-group">
+    <span class="input-group-text">Query</span>
+    <textarea class="form-control" name="query" aria-label="With textarea"></textarea>
+  </div>
+<br>
+<br>
+<div class="mx-auto" align="center" style="width:100px;" >
+    <button type="Submit" class="btn btn-dark">Post</button>
+</div>
+</div>
+</form>
+<div>
+<br><br>
+<!-- Button trigger modal -->
+<div align="center">
+<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    See all discussions
+  </button>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">All Discussions</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+    <table class="table">
+        <tbody>
+            <thead>
+                <tr>
+                    <th scope="col">Sno.</th>
+                    <th scope="col">Farmer Name</th>
+                    <th scope="col">Query</th>
+                </tr>
+            </thead>
+            {% for x in alldis %}
+            <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{x.Farmer_name}}</td>
+                <td>{{x.Query}}</td>
+                <td> <a href ="/ans/{{loop.index}}" type="button" class="btn btn-outline-dark ">Type Ans</td>
+                <td> <a href ="/viewans/{{loop.index}}" type="button" class="btn btn-outline-dark ">View Ans</td>
+                
+            </tr>  
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}

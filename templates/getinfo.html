@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>GetInfo</title>
+{% endblock title %}
+{% block body %}
+<form action="/answer1"  method="POST">
+    <br>
+    <br>
+    <div class="container mx-auto" style="width:400px;">
+        <br><br><div class="badge bg-dark text-wrap">
+        <h3><i>Select  name  of  the  crop </i></h3></div>
+    <div class="container mx-auto m-5" style="width:200px;">
+        <select class="w-100 form-select" name="crop_name" aria-label="Default select example">
+            <option selected value="23">None</option>
+            <option value="1">Rice</option>
+            <option value="2">Maize</option>
+            <option value="3">Chickpea</option>
+            <option value="4">Kidneybeans</option>
+            <option value="5">Pigeonpeas</option>
+            <option value="6">Mothbeans</option>
+            <option value="7">Mungbean</option>
+            <option value="8">Blackgram</option>
+            <option value="9">Lentil</option>
+            <option value="10">Pomegranate</option>
+            <option value="11">Banana</option>
+            <option value="12">Mango</option>
+            <option value="13">Grapes</option>
+            <option value="14">Watermelon</option>
+            <option value="15">Muskmelon</option>
+            <option value="16">Apple</option>
+            <option value="17">Orange</option>
+            <option value="18">Papaya</option>
+            <option value="19">Coconut</option>
+            <option value="20">Cotton</option>
+            <option value="21">Jute</option>
+            <option value="22">Coffee</option>
+        </select>
+
+    </div>
+    <div class="container mx-auto" style="width:400px;">
+        <br><br><div class="badge bg-dark text-wrap">
+        <h3><i>Select  information  type</i></h3></div>
+    <div class="container mx-auto m-5" style="width:200px;">
+        <select class="w-100 form-select " name="info_type" aria-label="Default select example">
+            <option selected value="9">None</option>
+            <option value="1">Crop Plan</option>
+            <option value="2">Seeds Information</option>
+            <option value="3">Soil Needs</option>
+            <option value="4">Irrigation Strategy</option>
+            <option value="5">Protecting the crop</option>
+            <option value="6">Machinery Required</option>
+            <option value="7">Storage Information</option>
+            <option value="8">MSP of crop</option>
+        </select>
+    </div>
+
+<div class="mx-auto" align="center" style="width:100px;" >
+    <button type="Submit" class="btn btn-dark">Submit</button>
+</div>
+</form>
+{% endblock body %}
